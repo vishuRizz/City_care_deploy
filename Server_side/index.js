@@ -5,7 +5,7 @@ const rootRouter = require("./routes/index");
 const app = express();
 
 app.use(cors({
-  origin: ["https://city-care.vercel.app/"],
+  origin: ["*"],
   methods: ["POST", "GET"],
   credentials: true,
 }));
