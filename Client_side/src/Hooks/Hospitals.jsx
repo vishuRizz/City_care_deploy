@@ -10,7 +10,7 @@ const useHospitals = () => {
     const getHospitals = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/hospital/gethospitals"
+          "https://city-care.vercel.app/api/v1/hospital/gethospitals"
         );
         setHospitals(response.data.hospitals);
       } catch (err) {
