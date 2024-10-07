@@ -37,7 +37,6 @@ function HospitalList() {
               <p className="text-gray-600">Email: {hospital.email}</p>
               <p className="text-gray-600">Contact: {hospital.contactNumber}</p>
               <p className="text-gray-600">Address: {hospital.address}</p>
-              {/* <p className="text-gray-600">Type: {hospital.hospitalType}</p> */}
               <p className="text-gray-600">
                 Emergency Services: {hospital.emergencyServices ? "Yes" : "No"}
               </p>

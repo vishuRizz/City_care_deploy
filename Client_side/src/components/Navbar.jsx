@@ -57,14 +57,17 @@ function Navbar() {
               onMouseEnter={toggleDropdown}
               onMouseLeave={toggleDropdown}
             >
-              <a href="#" className="no-underline text-slate-600">
+              <a  className="no-underline text-slate-600">
                 Sign Up / Sign In
               </a>
               {isDropdownOpen && (
                 <div className="absolute left-0 p-3 bg-white shadow-lg h-52 w-52 rounded-xl text-slate-200">
                   <div>
                     <a
-                      href="/hospital-signin"
+                     onClick={()=>{
+                      navigate("/hospital-signin")
+                    }
+                    }
                       className="block no-underline duration-300 border-b-2 text-slate-600 hover:scale-110"
                     >
                       Hospital Login
