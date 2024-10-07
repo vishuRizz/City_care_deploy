@@ -10,6 +10,11 @@ app.use(cors({
   credentials: true,
 }));
 app.use(express.json());
+app.post("/", (req, res)=>{
+  res.json({
+    "message" : "deployment working perfectly, yaaayyyy"
+  })
+})
  
 app.use("/api/v1", rootRouter);
 
