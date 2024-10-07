@@ -1,16 +1,16 @@
 
 const mongoose = require("mongoose");
 
+mongoose.connect("mongodb+srv://vishurizz01:RzfgxKDYAOSSooKq@cluster0.7ozbuch.mongodb.net/Hospital_DB")
+// require('dotenv').config();
 
-require('dotenv').config();
-
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('Connected to MongoDB'))
-.catch((error) => console.error('Connection error:', error));
-
+// mongoose.connect(process.env.MONGO_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// })
+// .then(() => console.log('Connected to MongoDB'))
+// .catch((error) => console.error('Connection error:', error));
+// console.log(process.env.MONGO_URI)
 
 const patientSchema = new mongoose.Schema(
   {
