@@ -15,7 +15,7 @@ const AddDoctor = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/v1/hospital/add-doctor/${hospitalId}`,
+        `https://city-care-server.vercel.app/api/v1/hospital/add-doctor/${hospitalId}`,
         {
           doctorName,
           doctorSpecialization,

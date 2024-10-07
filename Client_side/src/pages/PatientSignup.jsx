@@ -107,7 +107,7 @@ function PatientSignup() {
             <button
               onClick={async () => {
                 const response = await axios.post(
-                  `http://localhost:3000/api/v1/patient/signup/${id}`,
+                  `https://city-care-server.vercel.app/api/v1/patient/signup/${id}`,
                   {
                     name,
                     email,

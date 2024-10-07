@@ -12,7 +12,7 @@ function SpecialDoctors() {
   useEffect(() => {
     async function call() {
       const response = await axios.get(
-        `http://localhost:3000/api/v1/hospital/doctors/${specialisation}`
+        `https://city-care-server.vercel.app/api/v1/hospital/doctors/${specialisation}`
       );
       console.log(response.data);
       setDoctors(response.data.doctors);

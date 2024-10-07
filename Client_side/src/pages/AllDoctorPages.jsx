@@ -10,7 +10,7 @@ function AllDoctorPages() {
     async function getDoctor() {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/hospital/get-all-doctors"
+          "https://city-care-server.vercel.app/api/v1/hospital/get-all-doctors"
         );
         setDoctors(response.data.doctors);
         // console.log(response.data.doctors);
