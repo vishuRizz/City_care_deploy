@@ -76,7 +76,10 @@ function Navbar() {
 
                   <div>
                     <a
-                      href="/patient-signin"
+                      onClick={()=>{
+                        navigate("/hospital-signin")
+                      }
+                      }
                       className="block pt-3 no-underline duration-300 border-b-2 text-slate-600 hover:scale-110"
                     >
                       Patient Login

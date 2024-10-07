@@ -10,14 +10,14 @@ function MainBox() {
     <>
       <div className="grid grid-cols-1 gap-4 p-8 md:grid-cols-3">
         <div
-          className={`flex items-center p-4 rounded-lg border border-yellow-200 bg-[#fdfff4] duration-300 hover:scale-95`}
+          className={`flex items-center cursor-pointer p-4 rounded-lg border border-yellow-200 bg-[#fdfff4] duration-300 hover:scale-95`}
         >
           <div className="mr-4">
             <img src={calander} alt="" className="w-12 h-12" />
           </div>
           <div>
-            <h3 className="text-xl font-bold">Book an Appointment</h3>
-            <p className="text-gray-600">With country's leading experts</p>
+            <h3 className="text-xl font-bold">Patient's Medi Space</h3>
+            <p className="text-gray-600">Our Medical Interactions</p>
           </div>
         </div>
         <div

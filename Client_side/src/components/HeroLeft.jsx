@@ -27,7 +27,7 @@ function HeroLeft() {
               }}
               className="flex items-center"
             >
-              <span className="font-semibold text-red-500">Cardiac Care</span>
+              <span className="font-semibold hover:text-red-500">Cardiac Care</span>
             </div>
             <span className="text-xl text-red-500">&gt;</span>
           </li>
@@ -38,7 +38,7 @@ function HeroLeft() {
                 navigate("/cancer-care");
               }}
             >
-              <span className="text-gray-700">Cancer Care</span>
+              <span className="text-gray-700 hover:text-red-500">Cancer Care</span>
             </div>
             <span className="text-xl text-gray-700">&gt;</span>
           </li>
@@ -46,7 +46,7 @@ function HeroLeft() {
             <div onClick={()=>{
               navigate("/Neurosciences")
             }} className="flex items-center">
-              <span className="text-gray-700">Neurosciences</span>
+              <span className="text-gray-700 hover:text-red-500">Neurosciences</span>
             </div>
             <span className="text-xl text-gray-700">&gt;</span>
           </li>
@@ -54,19 +54,19 @@ function HeroLeft() {
             <div onClick={()=>{
               navigate("/gastrosciences")
             }} className="flex items-center">
-              <span className="text-gray-700">Gastrosciences</span>
+              <span className="text-gray-700 hover:text-red-500">Gastrosciences</span>
             </div>
             <span className="text-xl text-gray-700">&gt;</span>
           </li>
           <li className="flex items-center justify-between">
             <div className="flex items-center">
-              <span className="text-gray-700">Orthopaedics</span>
+              <span className="text-gray-700 hover:text-red-500">Orthopaedics</span>
             </div>
             <span className="text-xl text-gray-700">&gt;</span>
           </li>
           <li className="flex items-center justify-between">
             <div className="flex items-center">
-              <span className="text-gray-700">Renal Care</span>
+              <span className="text-gray-700 hover:text-red-500">Renal Care</span>
             </div>
             <span className="text-xl text-gray-700">&gt;</span>
           </li>
