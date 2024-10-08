@@ -10,6 +10,9 @@ function MainBox() {
     <>
       <div className="grid grid-cols-1 gap-4 p-8 md:grid-cols-3">
         <div
+        onClick={()=>{
+          navigate("/patient-dashboard")
+        }}
           className={`flex items-center cursor-pointer p-4 rounded-lg border border-yellow-200 bg-[#fdfff4] duration-300 hover:scale-95`}
         >
           <div className="mr-4">

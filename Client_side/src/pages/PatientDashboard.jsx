@@ -6,13 +6,14 @@ import PatientDetails from "../components/PatientDetails";
 import PastTreatments from "../components/PastTreatments";
 import BMICalculator from "../components/BMICalculator";
 import InputBar from "../components/InputBar";
+import { useParams } from "react-router-dom";
 
 function PatientDashboard() {
   const treatmentsData = [
     { date: "18 Aug ’24", type: "Orthopaedic", doctor: "Dr. Sachin Sen" },
     { date: "30 Apr ’24", type: "Pulmonary", doctor: "Dr. Tom Alter" },
   ];
-
+const {name, age} = useParams()
   return (
     <>
       <Navbar />
@@ -24,7 +25,7 @@ function PatientDashboard() {
           </div>
 
           <div className="p-2 ">
-            <PatientDetails />
+            <PatientDetails name={name} age={age} />
           </div>
           <div className="grid grid-cols-3 gap-0 mt-4 sm:grid-cols-5">
             <div className="col-span-3 p-3 bg-opacity-0 h-fit ">

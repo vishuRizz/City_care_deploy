@@ -77,7 +77,7 @@ function Navbar() {
                   <div>
                     <a
                       onClick={()=>{
-                        navigate("/hospital-signin")
+                        navigate("/patient-signup/66d316beb1edbdc0f279c00e")
                       }
                       }
                       className="block pt-3 no-underline duration-300 border-b-2 text-slate-600 hover:scale-110"
