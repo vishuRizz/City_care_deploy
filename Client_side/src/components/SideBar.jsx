@@ -5,7 +5,7 @@ function SideBar() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="min-h-screen p-4 text-white w-72 lg:w-64 xl:w-60 bg-gradient-to-b from-orange-300 to-orange-300 shadow-3xl">
+      <div className="min-h-screen p-4 text-white bg-gray-300 w-72 lg:w-64 xl:w-60 shadow-3xl">
         <div className="flex flex-col items-center p-3 mb-8 bg-white shadow-lg rounded-2xl shadow-gray-300">
           <p className="mt-4 mb-2 text-lg font-semibold text-center text-black">
             Good Morning

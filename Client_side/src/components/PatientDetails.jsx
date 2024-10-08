@@ -1,6 +1,6 @@
 import React from "react";
 
-function PatientDetails({name, age}) {
+function PatientDetails({ name, age }) {
   return (
     <div className="flex flex-col sm:flex-row items-center p-3 bg-white rounded-lg shadow-2xl shadow-gray-500 w-full  mx-auto h-auto sm:h-[150px] border-solid">
       <div className="flex-shrink-0 mb-4 sm:mb-0">
@@ -14,7 +14,7 @@ function PatientDetails({name, age}) {
       </div>
 
       <div className="text-center sm:ml-6 sm:text-left">
-        <div className="text-2xl font-bold text-gray-800 sm:text-3xl">
+        <div className="text-xl font-bold text-gray-800 sm:text-3xl">
           Patient
         </div>
         <div className="text-lg font-bold text-gray-600">{name}</div>
@@ -22,9 +22,9 @@ function PatientDetails({name, age}) {
       </div>
 
       <div className="grid grid-cols-3 mt-4 text-sm text-center text-gray-500 sm:mt-0 sm:ml-auto gap-x-32 gap-y-12 sm:text-left">
-       
         <div>
-          <span className="font-bold text-gray-800">Age:</span>{age}
+          <span className="font-bold text-gray-800">Age:</span>
+          {age}
         </div>
         <div>
           <span className="font-bold text-gray-800">Blood:</span> B+
