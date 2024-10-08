@@ -129,7 +129,7 @@ function PatientSignup() {
             </button>
             <div className="flex justify-center">
               <div className="cursor-pointer ">
-                Hospital already Registered?{" "}
+                Patient already Registered?{" "}
               </div>
               <div className="underline cursor-pointer"> Signin</div>
             </div>
