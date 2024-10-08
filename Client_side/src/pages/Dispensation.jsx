@@ -125,7 +125,9 @@ const MedicineInfo = () => {
     },
     amoxicillin: {
       name: "Amoxicillin",
-      image: "https://via.placeholder.com/400x200.png?text=Amoxicillin",
+      image:
+      "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/5/22/1432316638772/Paracetamol---should-you--009.jpg?width=700&quality=85&auto=format&fit=max&s=4762a5336c860dcbda1aaac586d38945",
+   
       options: [250, 500, 875],
       info: {
         250: {
@@ -187,9 +189,17 @@ const MedicineInfo = () => {
     <Navbar/>
     <div className="mt-12 bg-gray-100">
       <div className="container py-10 mx-auto">
+        <div className="mb-2 text-2xl">
         <h1 className="mb-10 text-3xl font-bold text-center">
           Medicine Information
         </h1>
+        <div>
+          <span className="text-red-500">
+            Alert: { " "}
+          </span>
+          This is only for reference purposes, we don't recommend medicine without doctor consultation
+        </div>
+        </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
           {Object.keys(medicineData).map((medicineKey) => {
             const medicine = medicineData[medicineKey];
