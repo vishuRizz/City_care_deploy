@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const GlowingButton = () => {
+const GlowingButton = ({ size = "medium" }) => {
   return (
-    <StyledWrapper>
+    <StyledWrapper size={size}>
       <button className="shadow__btn">Emergency</button>
     </StyledWrapper>
   );
@@ -11,9 +11,11 @@ const GlowingButton = () => {
 
 const StyledWrapper = styled.div`
   .shadow__btn {
-    padding: 10px 20px;
+    padding: ${(props) =>
+      props.size === "small" ? "5px 10px" : props.size === "large" ? "15px 30px" : "10px 20px"};
+    font-size: ${(props) =>
+      props.size === "small" ? "12px" : props.size === "large" ? "20px" : "17px"};
     border: none;
-    font-size: 17px;
     color: #fff;
     border-radius: 7px;
     letter-spacing: 4px;
@@ -24,13 +26,13 @@ const StyledWrapper = styled.div`
   }
 
   .shadow__btn {
-    background: rgba(240,78,47,255);
-    box-shadow: 0 0 25px rgba(240,78,47,255);
+    background: rgba(240, 78, 47, 255);
+    box-shadow: 0 0 25px rgba(240, 78, 47, 255);
   }
 
   .shadow__btn:hover {
-    box-shadow: 0 0 5px rgba(240,78,47,255), 0 0 25px rgba(240,78,47,255),
-      0 0 50px rgba(240,78,47,255), 0 0 100px rgba(240,78,47,255);
+    box-shadow: 0 0 5px rgba(240, 78, 47, 255), 0 0 25px rgba(240, 78, 47, 255),
+      0 0 50px rgba(240, 78, 47, 255), 0 0 100px rgba(240, 78, 47, 255);
   }
 `;
 

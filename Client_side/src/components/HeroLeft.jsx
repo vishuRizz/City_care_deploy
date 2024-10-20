@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function HeroLeft() {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-between p-10 bg-gray-50">
+    <div className="justify-between p-10 md:flex bg-gray-50">
       <div className="w-1/2">
         <h2 className="text-lg font-semibold text-gray-500">Specialities</h2>
         <h1 className="mt-4 text-5xl font-bold leading-snug text-gray-800 max-md:hidden">
@@ -18,7 +18,7 @@ function HeroLeft() {
         </button>
         </div>
       </div>
-      <div className="w-1/2">
+      <div className="w-1/2 mt-6">
         <ul className="space-y-6">
           <li className="flex items-center justify-between cursor-pointer">
             <div
@@ -72,7 +72,10 @@ function HeroLeft() {
           </li>
         </ul>
         <div className="mt-10">
-          <button className="flex items-center font-semibold text-red-500">
+          <button 
+          onClick={()=>{
+            navigate("/all-doctors")
+          }} className="flex items-center font-semibold text-red-500">
             View All Specialities
             <span className="ml-2 text-xl">&gt;</span>
           </button>

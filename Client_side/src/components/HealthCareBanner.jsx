@@ -15,11 +15,11 @@ function HealthCareBanner() {
           </h1>
         </div>
 
-        <div className="w-full max-w-md mt-6">
+        <div className="w-full max-w-md p-2 mt-6">
           <div className="relative">
             <input
               type="text"
-              placeholder="Search for Doctors, Specialities and Hospitals"
+              placeholder="Search for Doctors and Hospitals"
               className="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button className="absolute transform -translate-y-1/2 right-3 top-2/4">

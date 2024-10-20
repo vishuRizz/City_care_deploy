@@ -5,141 +5,114 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import SideScroll from "./SideScroll";
 import { useNavigate } from "react-router-dom";
-import ContactUs from "./ContactUs";
 
 function Navbar() {
   const bottomRef = useRef(null);
 
-  const scrollToBottom = () => {
-    if (bottomRef.current) {
-      bottomRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+
   const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [nav, setNav] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-  const [nav, setNav] = useState(false);
+
   return (
     <>
-      <nav className="flex fixed top-0 left-0 w-full h-[9vh] justify-around px-2 text-xl shadow-sm z-10 bg-white ">
-        <div className="flex p-2">
-          {" "}
+      <nav className="flex fixed top-0 left-0 w-full h-[9vh] justify-between px-4 lg:px-8 text-xl shadow-sm z-10 bg-white">
+        {/* Logo */}
+        <div className="flex items-center p-2">
           <a href="/">
-            <FaHospitalUser color="black" size={60} />
+            <FaHospitalUser color="black" size={45} className="w-10 md:w-12" />
           </a>
-          <div className="px-3 pt-3 text-3xl max-md:text-xl max-md:mt-2">
-            <a href="/" className="text-black no-underline ">
+          <div className="pl-2 text-2xl lg:text-3xl max-md:text-xl max-md:mt-1">
+            <a href="/" className="text-black no-underline">
               CityCare
             </a>
           </div>
         </div>
-        <div className="flex pt-[2vh] gap-x-8 text-slate-600 max-lg:hidden">
-          <div className="flex p-2 cursor-pointer gap-x-8">
-            <ul></ul>
-            <div
-              onClick={() => {
-                navigate("/contact-us");
-              }}
-              className="duration-100 hover:scale-110 "
-            ></div>
-            <div
-              onClick={scrollToBottom}
-              className="duration-100 hover:scale-110"
-            >
-              {" "}
-              Contact Us{" "}
-            </div>
-            <div
-              className="relative "
-              onMouseEnter={toggleDropdown}
-              onMouseLeave={toggleDropdown}
-            >
-              <a  className="no-underline text-slate-600">
-                Sign Up / Sign In
-              </a>
-              {isDropdownOpen && (
-                <div className="absolute left-0 p-3 bg-white shadow-lg h-52 w-52 rounded-xl text-slate-200">
-                  <div>
-                    <a
-                     onClick={()=>{
-                      navigate("/hospital-signin")
-                    }
-                    }
-                      className="block no-underline duration-300 border-b-2 text-slate-600 hover:scale-110"
-                    >
-                      Hospital Login
-                    </a>
-                  </div>
 
-                  <div>
-                    <a
-                      onClick={()=>{
-                        navigate("/patient-signup/66d316beb1edbdc0f279c00e")
-                      }
-                      }
-                      className="block pt-3 no-underline duration-300 border-b-2 text-slate-600 hover:scale-110"
-                    >
-                      Patient Login
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/admin-login"
-                      className="block pt-3 no-underline duration-300 border-b-2 text-slate-600 hover:scale-110"
-                    >
-                      Admin Login
-                    </a>
-                  </div>
-                  <div>
-                    <div
-                      onClick={() => {
-                        localStorage.removeItem("token");
-                        alert("you are logged out successfuly");
-                      }}
-                      className="block pt-3 no-underline duration-300 border-b-2 text-slate-600 hover:scale-110"
-                    >
-                      Logout
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-            <div
-              onClick={() => {
-                navigate("/dispensation");
-              }}
-              className=" hover:scale-110"
-            >
-              Medication
-            </div>
-          </div>
-        </div>
-        <div
-          onClick={() => {
-            navigate("/emergency");
-          }}
-          className="pt-[1.5vh] flex pl-14"
-        >
-          <GlowingButton />
+        {/* Desktop Links */}
+        <div className="items-center hidden lg:flex gap-x-8 text-slate-600">
           <div
             onClick={() => {
-              setNav(!nav);
+              navigate("/contact-us");
             }}
-            className="mt-1 ml-5 sm:hidden"
+            className="duration-100 cursor-pointer hover:scale-110"
           >
-            {nav ? (
-              <RxCross1 size={35} />
-            ) : (
-              <RxHamburgerMenu className="" size={35} />
+            Contact Us
+          </div>
+
+          <div
+            className="relative "
+            onMouseEnter={toggleDropdown}
+            onMouseLeave={toggleDropdown}
+          >
+            <a className="no-underline cursor-pointer text-slate-600">
+              Sign Up / Sign In
+            </a>
+            {isDropdownOpen && (
+              <div className="absolute left-0 p-3 bg-white shadow-lg rounded-xl text-slate-600">
+                <a
+                  onClick={() => navigate("/hospital-signin")}
+                  className="block duration-300 border-b-2 hover:scale-110"
+                >
+                  Hospital Login
+                </a>
+                <a
+                  onClick={() =>
+                    navigate("/patient-signup/66d316beb1edbdc0f279c00e")
+                  }
+                  className="block pt-3 duration-300 border-b-2 hover:scale-110"
+                >
+                  Patient Login
+                </a>
+                <a
+                  onClick={() => navigate("/admin-login")}
+                  className="block pt-3 duration-300 border-b-2 hover:scale-110"
+                >
+                  Admin Login
+                </a>
+                <div
+                  onClick={() => {
+                    localStorage.removeItem("token");
+                    alert("You have successfully logged out.");
+                  }}
+                  className="block pt-3 duration-300 cursor-pointer hover:scale-110"
+                >
+                  Logout
+                </div>
+              </div>
             )}
           </div>
+
+          <div
+            onClick={() => navigate("/dispensation")}
+            className="duration-100 cursor-pointer hover:scale-110"
+          >
+            Medication
+          </div>
         </div>
-        <div>
-          <SideScroll nav={nav} />
+
+        {/* Glowing Button and Hamburger for mobile */}
+        <div className="flex items-center">
+          <div
+            onClick={() => navigate("/emergency")}
+            className="pr-4 lg:pr-0"
+          >
+            <GlowingButton size="small" />
+          </div>
+          <div
+            onClick={() => setNav(!nav)}
+            className="cursor-pointer lg:hidden"
+          >
+            {nav ? <RxCross1 size={30} /> : <RxHamburgerMenu size={30} />}
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {nav && <SideScroll nav={nav} />}
       </nav>
     </>
   );
