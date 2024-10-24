@@ -8,8 +8,8 @@ function MainBox() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="grid grid-cols-1 gap-4 p-8 md:grid-cols-3">
-        <div
+      <div className="grid grid-cols-1 gap-4 p-8 md:grid-cols-2">
+        {/* <div
         onClick={()=>{
           navigate("/patient-dashboard/Avi-Srivastava/18")
         }}
@@ -22,7 +22,7 @@ function MainBox() {
             <h3 className="text-xl font-bold">Patient's Medi Space</h3>
             <p className="text-gray-600">Our Medical Interactions</p>
           </div>
-        </div>
+        </div> */}
         <div
           onClick={() => {
             navigate("/hospital-list");
