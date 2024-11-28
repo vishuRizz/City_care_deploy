@@ -1,7 +1,7 @@
 
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://vishurizz01:RzfgxKDYAOSSooKq@cluster0.7ozbuch.mongodb.net/Hospital_DB")
+mongoose.connect("mongodb+srv://vishurizz01:HwCmM3l7rF7YZkvp@cluster0.7ozbuch.mongodb.net/Hospital_DB")
 // require('dotenv').config();
 
 // mongoose.connect(process.env.MONGO_URI, {
